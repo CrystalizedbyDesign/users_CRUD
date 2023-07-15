@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Read (One)</title>
+</head>
+<body>
+    <h1 class="text-left">User {{user.id}}</h1>
+    <div id="new_user">
+        <form class="bg-dark text-left mx-auto col-5 p-3">
+            <div class="form-group">
+                <div class="form-group text-light">
+                    <label for="full_name" class="full_name">Full Name: {{user.full_name()}}</label>
+                </div>
+                <div class="form-group text-light">
+                    <label for="email" class="email">Email: {{user.email}}</label>
+                </div>
+                <div class="form-group text-light">
+                    <label for="created_on" class="created_on">Created On: {{user.created_on}}</label>
+                </div>
+                <div class="form-group text-light">
+                    <label for="last_updated_on" class="last_updated_on">Last Updated On: {{user.last_updated_on}}</label>
+                </div>
+
+                <footer id="go_home">
+
+                    <a href="/users"    id="home "  type="home" value="Home" class="link-primary p-2">Home</a>
+
+                </footer>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
