@@ -1,0 +1,16 @@
+*{
+    margin-top: 10px;
+}
+#read_all, #new_user_form, #user_card, #edit_form{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.home_link{
+    display: flex;
+    justify-content: right;
+}
+
+.btn{
+    margin-top: 30px;
+}

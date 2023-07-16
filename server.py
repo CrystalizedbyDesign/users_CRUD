@@ -15,20 +15,20 @@ def users():
     return render_template("read_all.html", users=User.get_all())
 
 @app.route('/users/new')
-def new_user():
+def new():
     print("******************************22")
     return render_template("new_user.html")
 
 
 
-@app.route('/users/create', methods=['POST'])
+@app.route('/user/create', methods=['POST'])
 def create():
     print(request.form)
     print("################################44")
     User.save(request.form)
     return redirect('/users')
 
-@app.route('/users/edit/<int:id>')
+@app.route('/user/<int:id>/edit')
 def edit(id):
     data = {
         "id":id
@@ -36,27 +36,20 @@ def edit(id):
     return render_template("edit.html", user=User.get_one_user(data))
 
 
-
-
-@app.route('/users/show/<int:id>')
+@app.route('/user/show/<int:id>')
 def show(id):
     data ={
         "id":id
     }
-    
-    one_user = User.get_one_user(id) #here corresponds to the template
-    return render_template("users.html", show_user=User.get_one_user(data)) #Here corresponds to the data you are submitting
+    return render_template("users.html", user=User.get_one_user(data)) #Here corresponds to the data you are submitting
 
 
-
-    
-    
-@app.route('/users/update',methods=['POST'])
+@app.route('/user/update',methods=['POST'])
 def update():
     User.update(request.form)
     return redirect('/users')
 
-@app.route('/users/delete/<int:id>')
+@app.route('/user/delete/<int:id>')
 def delete(id):
     data ={
         "id":id

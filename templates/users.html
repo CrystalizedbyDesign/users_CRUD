@@ -9,30 +9,18 @@
     <title>Read (One)</title>
 </head>
 <body>
-    <h1 class="text-left">User {{user.id}}</h1>
-    <div id="new_user">
-        <form class="bg-dark text-left mx-auto col-5 p-3">
-            <div class="form-group">
-                <div class="form-group text-light">
-                    <label for="full_name" class="full_name">Full Name: {{user.full_name()}}</label>
-                </div>
-                <div class="form-group text-light">
-                    <label for="email" class="email">Email: {{user.email}}</label>
-                </div>
-                <div class="form-group text-light">
-                    <label for="created_on" class="created_on">Created On: {{user.created_on}}</label>
-                </div>
-                <div class="form-group text-light">
-                    <label for="last_updated_on" class="last_updated_on">Last Updated On: {{user.last_updated_on}}</label>
-                </div>
+    <div id="user_card">
 
-                <footer id="go_home">
+        <h1 class="text-left">User {{user.id}}</h1><a class="home_link" href="/users" >Home</a>
+        <p>Full Name: {{user.full_name()}}</p>
+        <p>Email: {{user.email}}</p>
+        <p>Created On: {{user.created_at.strftime("%b %d %Y")}}</p>
+        <p>Last Updated On: {{user.updated_at.strftime  ("%c %p")}}</p>
+        <br>
+                    
+        <a href="/user/{{user.id}}/edit"    id="edit " value="Edit" class="link-primary">Edit</a> | 
+        <a href="/user/delete/{{user.id}}"    id="delete " value="delete" class="link-primary">Delete</a>
 
-                    <a href="/users"    id="home "  type="home" value="Home" class="link-primary p-2">Home</a>
-
-                </footer>
-            </div>
-        </form>
     </div>
 </body>
 </html>

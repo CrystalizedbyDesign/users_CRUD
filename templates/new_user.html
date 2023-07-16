@@ -7,29 +7,28 @@
     rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
     crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-    <title>Add a New User</title>
+    <title>Create</title>
 </head>
 <body>
-    <h1 class="text-left mx-auto my-0">Add a New User</h1>
-    <div>
-        <a class="text-right" href="/users" >Home</a>
-    </div> 
-    
-    <form action="/users/create" method="POST" class="text-left col-4 my-0 bg-dark text-white" >
-        <div class="form-group">
-            <label for="first_name">First Name:  </label>
-            <input type="text" class="form-control" name="first_name">
-        </div>
-        <div class="form-group">
-            <label for="last_name">Last Name: </label>
-            <input type="text" class="form-control" name="last_name">
-        </div>
-        <div class="form-group">
-            <label for="email">Email: </label>
-            <input type="text" class="form-control" name="email">
-        </div>
-        <input class="btn btn-success" type="submit" value="Create">
-    </form>
+    <div id="new_user_form" class="text-left">
+        <h1>Add a New User</h1> <a class="home_link" href="/users" >Home</a>
+        <form action="/user/create" method="POST" class="text-left col-5 text-dark" >
+            <div class="form-group">
+                <label for="first_name">First Name:  </label>
+                <input type="text" class="form-control" name="first_name">
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name: </label>
+                <input type="text" class="form-control" name="last_name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email: </label>
+                <input type="text" class="form-control" name="email">
+            </div>
+            <input class="btn btn-warning" type="submit" value="Create">
+        </form>
+
+    </div>
     
 </body>
 </html>
