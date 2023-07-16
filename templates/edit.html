@@ -13,7 +13,7 @@
     <div id="edit_form">
 
         <form action="/user/update" method="POST" class="text-left col-4">
-            <h2 class="text-left">Edit {{ user.first_name }}</h2> <a class="home_link" href="/users" >Home</a>
+            <h2>Edit {{ user.first_name }}</h2> <a class="home_link" href="/users" >Home</a>
             <input type="hidden" name="id" value="{{user.id}}">
             <div class="form-group">
                 <label for="first_name">First Name:  </label>

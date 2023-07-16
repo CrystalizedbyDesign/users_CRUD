@@ -6,11 +6,21 @@
     margin-right: 60px;
 }
 
-.home_link{
+.home_link, .home {
     display: flex;
     justify-content: right;
+    margin-right: 60px;
 }
 
 .btn{
     margin-top: 30px;
 }
+.user_card{
+    display: flex;
+    justify-content: right;
+    border: 2px solid black;
+}
+#read_one, .delete{
+    margin-left: 60px;
+}
+

@@ -9,18 +9,22 @@
     <title>Read (One)</title>
 </head>
 <body>
-    <div id="user_card">
+    
+    <h1 id="read_one" class="text-left">User {{user.id}}</h1><a class="home" href="/users" >Home</a>
+    <div id="user_card" class="border border-2">
 
-        <h1 class="text-left">User {{user.id}}</h1><a class="home_link" href="/users" >Home</a>
         <p>Full Name: {{user.full_name()}}</p>
         <p>Email: {{user.email}}</p>
         <p>Created On: {{user.created_at.strftime("%b %d %Y")}}</p>
         <p>Last Updated On: {{user.updated_at.strftime  ("%c %p")}}</p>
         <br>
                     
+    </div>
+
+    <div class="delete">
         <a href="/user/{{user.id}}/edit"    id="edit " value="Edit" class="link-primary">Edit</a> | 
         <a href="/user/delete/{{user.id}}"    id="delete " value="delete" class="link-primary">Delete</a>
-
     </div>
+
 </body>
 </html>
